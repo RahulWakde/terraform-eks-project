@@ -1,4 +1,4 @@
-module "vpc" {
+module "eks" {
     
   source = "./eks-module/"
 
@@ -6,7 +6,7 @@ module "vpc" {
    cidr_block_public_2 = var.cidr_block_public_2
    cidr_block_private_1 = var.cidr_block_private_1
    cidr_block_private_2 = var.cidr_block_private_2
-   
+
    eks         = local.eks
    vpc         = local.vpc
    env         = local.env
