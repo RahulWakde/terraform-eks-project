@@ -4,8 +4,8 @@ resource "aws_eks_node_group" "eks-terraform-node-Group-private" {
   node_group_name = "eks-terraform-node-Group-general"
   node_role_arn   = aws_iam_role.node-roles.arn
 
-  subnet_ids = [aws_subnet.private_1.id,
-                aws_subnet.private_2.id]
+  subnet_ids = [aws_subnet.private[0].id,
+                aws_subnet.private[1].id]
 
   scaling_config {
     desired_size = 2
