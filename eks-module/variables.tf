@@ -11,6 +11,7 @@
     type        = map(string)
   }
 variable "cidr_block" {}
+variable "instance_type" {}
  
 
 
