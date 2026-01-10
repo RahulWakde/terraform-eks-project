@@ -7,5 +7,8 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env}-public"
+    "kubernetes.io/cluster/${var.env}-${var.eks}" = "owned"
+    "kubernets.io/role/elb"                           = "1"
+
   }
 }
