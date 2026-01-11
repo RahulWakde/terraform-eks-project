@@ -4,9 +4,10 @@
   variable env{}
   variable region{}
   variable eks_version{}
-  variable "az" {
-  type        = list(string)
-}
+#   variable "az" {
+#    type        = list(string)
+#    default = length(local.azs)
+#  }
   variable tags {
     type        = map(string)
   }

@@ -5,8 +5,6 @@ locals {
   region      = "us-west-2"
   eks_version = "1.30"
 
-  az = length(data.aws_availability_zones.available.names)
-  
   tags = {
     Name = "eks-terraform"
   }
