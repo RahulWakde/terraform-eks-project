@@ -8,7 +8,6 @@ module "eks" {
    env         = local.env
    region      = local.region
    eks_version = local.eks_version
-   az = data.aws_availability_zones.available.names
    instance_type = var.instance_type
    tags        = local.tags
 
