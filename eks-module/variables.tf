@@ -12,7 +12,10 @@
     type        = map(string)
   }
 variable "cidr_block" {}
-variable "instance_type" {}
+variable "instance_type" {
+  type    = list(string)
+  default = ["t3.small"]
+}
  
 
 
