@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "eks-terraform" {
-  name = var.eks
+  name = "${var.eks}-${var.env}"
   role_arn = aws_iam_role.eks-role.arn
   version  = var.eks_version
 
