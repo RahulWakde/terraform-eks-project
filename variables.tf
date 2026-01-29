@@ -16,4 +16,4 @@ variable "cidr_block" {
 variable "instance_type" {
   default = ["t3.small"]
 }
-  
+
